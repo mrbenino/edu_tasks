@@ -28,17 +28,44 @@ public class Main {
         System.out.println("Среднее геометрическое: " + Begin.geometric_mean(144, 674));
         System.out.println("Среднее геометрическое: " + BeginKt.geometric_mean(144, 674));
 
-        System.out.println("Сумма: " + Begin.sum(144, 674));
-        System.out.println("Сумма: " + BeginKt.sum(144, 674));
+        System.out.println("Сумма модулей: " + Begin.sum(144, 674));
+        System.out.println("Сумма модулей: " + BeginKt.sum(144, 674));
 
-        System.out.println("Произведение: " + Begin.subtraction(144, 674));
-        System.out.println("Произведение: " + BeginKt.subtraction(144, 674));
+        System.out.println("Разность модулей: " + Begin.subtraction(144, 674));
+        System.out.println("Разность модулей: " + BeginKt.subtraction(144, 674));
 
-        System.out.println("Частное: " + Begin.multiplication(144, 674));
-        System.out.println("Частное: " + BeginKt.multiplication(144, 674));
+        System.out.println("Произведение модулей: " + Begin.multiplication(144, 674));
+        System.out.println("Произведение модулей: " + BeginKt.multiplication(144, 674));
 
-        System.out.println("Модулей: " + Begin.division(144, 674));
-        System.out.println("Модулей: " + BeginKt.division(144, 674));
+        System.out.println("Частное модулей: " + Begin.division(144, 674));
+        System.out.println("Частное модулей: " + BeginKt.division(144, 674));
+
+        System.out.println("Сумма квадратов: " + Begin.sum_sqrt(144, 674));
+        System.out.println("Сумма квадратов: " + BeginKt.sum_sqrt(144, 674));
+
+        System.out.println("Разность квадратов: " + Begin.subtraction_sqrt(144, 674));
+        System.out.println("Разность квадратов: " + BeginKt.subtraction_sqrt(144, 674));
+
+        System.out.println("Произведение квадратов: " + Begin.multiplication_sqrt(144, 674));
+        System.out.println("Произведение квадратов: " + BeginKt.multiplication_sqrt(144, 674));
+
+        System.out.println("Частное квадратов: " + Begin.division_sqrt(144, 674));
+        System.out.println("Частное квадратов: " + BeginKt.division_sqrt(144, 674));
+
+        System.out.println("Гипотинуза триугольника: " + Begin.hypotenuse(144, 674));
+        System.out.println("Гипотинуза триугольника: " + BeginKt.hypotenuse(144, 674));
+
+        System.out.println("Перимитр триугольника: " + Begin.perimeter(144, 674));
+        System.out.println("Перимитр триугольника: " + BeginKt.perimeter(144, 674));
+
+        System.out.println("Площадь кольца: " + Begin.square_ring(14, 4));
+        System.out.println("Площадь кольца: " + BeginKt.square_ring(44, 6));
+
+        System.out.println("Радиус из длины окружности: " + Begin.radius_of_length(10));
+        System.out.println("Радиус из длины окружности: " + BeginKt.radius_of_length(40));
+
+        System.out.println("Площадь из длины окружности: " + Begin.square_of_length(10));
+        System.out.println("Площадь из длины окружности: " + BeginKt.square_of_length(44));
 
     }
 

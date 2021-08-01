@@ -1,5 +1,6 @@
 package Begin
 
+import kotlin.math.PI
 import kotlin.math.abs
 import kotlin.math.pow
 import kotlin.math.sqrt
@@ -43,7 +44,7 @@ fun square(a: Int, b: Int, c: Int): Int {
  * Найти длину окружности L и площадь круга S заданного радиуса R: L = 2·π·R, S = π·R2.
  * В качестве значения π использовать 3.14.
  */
-fun square(r: Int): Double {
+fun square(r: Double): Double {
     return Math.PI * (r * r)
 }
 
@@ -106,3 +107,72 @@ fun division(a: Double, b: Double): Double {
         0.0
     } else abs(a) / abs(b)
 };
+
+/**
+ * Даны два ненулевых числа. Найти сумму, разность, произведение и
+ * частное их квадратов.
+ */
+fun sum_sqrt(a: Double, b: Double): Double {
+    return if (a == 0.0 || b == 0.0) {
+        0.0
+    } else a.pow(2.0) + b.pow(2.0)
+}
+
+/**
+ * Даны два ненулевых числа. Найти сумму, разность, произведение и
+ * частное их квадратов.
+ */
+fun subtraction_sqrt(a: Double, b: Double): Double {
+    return if (a == 0.0 || b == 0.0) {
+        0.0
+    } else a.pow(2.0) + b.pow(2.0)
+}
+
+/**
+ * Даны два ненулевых числа. Найти сумму, разность, произведение и
+ * частное их квадратов.
+ */
+fun multiplication_sqrt(a: Double, b: Double): Double {
+    return if (a == 0.0 || b == 0.0) {
+        0.0
+    } else a.pow(2.0) + b.pow(2.0)
+}
+
+/**
+ * Даны два ненулевых числа. Найти сумму, разность, произведение и
+ * частное их квадратов.
+ */
+fun division_sqrt(a: Double, b: Double): Double {
+    return if (a == 0.0 || b == 0.0) {
+        0.0
+    } else a.pow(2.0) + b.pow(2.0)
+}
+
+/**
+ *Даны катеты прямоугольного треугольника a и b. Найти его гипотенузу c и периметр P
+ */
+fun hypotenuse(a: Double, b: Double): Double {
+    return sqrt(a.pow(2.0) + b.pow(2.0))
+}
+
+/**
+ *Даны катеты прямоугольного треугольника a и b. Найти его гипотенузу c и периметр P
+ */
+fun perimeter(a: Double, b: Double): Double {
+    return a + b + hypotenuse(a, b)
+}
+
+/**
+ * Даны два круга с общим центром и радиусами R1 и R2 (R1 > R2). Найти площади этих кругов S1 и S2, а также площадь S3 кольца, внешний радиус которого равен R1, а внутренний радиус равен R2:
+ */
+fun square_ring(a: Double, b: Double): Double {
+    return if (square(a) - square(b) > 0) square(a) - square(b) else square(b) - square(a)
+}
+
+fun radius_of_length(l: Double): Double {
+    return l / PI / 2;
+}
+
+fun square_of_length(l: Double): Double {
+    return square(radius_of_length(l))
+}

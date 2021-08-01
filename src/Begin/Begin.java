@@ -21,7 +21,7 @@ public class Begin {
      * @return
      */
     public static double square_cube(double a) {
-        return a * a * 6 ;
+        return a * a * 6;
     }
 
     /**
@@ -60,9 +60,8 @@ public class Begin {
      * @param r
      * @return
      */
-    public static double square(int r) {
-        double r_square = r * r;
-        return Math.PI * r_square;
+    public static double square(double r) {
+        return Math.PI * Math.pow(r, 2);
     }
 
     /**
@@ -109,7 +108,7 @@ public class Begin {
      * Даны два ненулевых числа. Найти сумму, разность, произведение и частное их модулей.
      */
     public static double sum(double a, double b) {
-        if(a == 0.0 ||  b == 0.0){
+        if (a == 0.0 || b == 0.0) {
             return 0.0;
         }
 
@@ -120,7 +119,7 @@ public class Begin {
      * Даны два ненулевых числа. Найти сумму, разность, произведение и частное их модулей.
      */
     public static double subtraction(double a, double b) {
-        if(a == 0.0 ||  b == 0.0){
+        if (a == 0.0 || b == 0.0) {
             return 0.0;
         }
 
@@ -131,7 +130,7 @@ public class Begin {
      * Даны два ненулевых числа. Найти сумму, разность, произведение и частное их модулей.
      */
     public static double multiplication(double a, double b) {
-        if(a == 0.0 ||  b == 0.0){
+        if (a == 0.0 || b == 0.0) {
             return 0.0;
         }
 
@@ -142,11 +141,126 @@ public class Begin {
      * Даны два ненулевых числа. Найти сумму, разность, произведение и частное их модулей.
      */
     public static double division(double a, double b) {
-        if(a == 0.0 ||  b == 0.0){
+        if (a == 0.0 || b == 0.0) {
             return 0.0;
         }
 
         return Math.abs(a) / Math.abs(b);
+    }
+
+    /**
+     * Даны два ненулевых числа. Найти сумму, разность, произведение и
+     * частное их квадратов.
+     *
+     * @param a
+     * @param b
+     * @return
+     */
+    public static double sum_sqrt(double a, double b) {
+        if (a == 0.0 || b == 0.0) {
+            return 0.0;
+        }
+
+        return Math.pow(a, 2) + Math.pow(b, 2);
+    }
+
+    /**
+     * Даны два ненулевых числа. Найти сумму, разность, произведение и
+     * частное их квадратов.
+     *
+     * @param a
+     * @param b
+     * @return
+     */
+    public static double subtraction_sqrt(double a, double b) {
+        if (a == 0.0 || b == 0.0) {
+            return 0.0;
+        }
+
+        return Math.pow(a, 2) - Math.pow(b, 2);
+    }
+
+    /**
+     * Даны два ненулевых числа. Найти сумму, разность, произведение и
+     * частное их квадратов.
+     *
+     * @param a
+     * @param b
+     * @return
+     */
+    public static double multiplication_sqrt(double a, double b) {
+        if (a == 0.0 || b == 0.0) {
+            return 0.0;
+        }
+
+        return Math.pow(a, 2) * Math.pow(b, 2);
+    }
+
+    /**
+     * Даны два ненулевых числа. Найти сумму, разность, произведение и
+     * частное их квадратов.
+     *
+     * @param a
+     * @param b
+     * @return
+     */
+    public static double division_sqrt(double a, double b) {
+        if (a == 0.0 || b == 0.0) {
+            return 0.0;
+        }
+
+        return Math.pow(a, 2) / Math.pow(b, 2);
+    }
+
+    /**
+     * Даны катеты прямоугольного треугольника a и b. Найти его гипотенузу c и периметр P
+     *
+     * @param a
+     * @param b
+     * @return
+     */
+    public static double hypotenuse(double a, double b) {
+        return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+    }
+
+    /**
+     * Даны катеты прямоугольного треугольника a и b. Найти его гипотенузу c и периметр P
+     *
+     * @param a
+     * @param b
+     * @return
+     */
+    public static double perimeter(double a, double b) {
+        return a + b + hypotenuse(a, b);
+    }
+
+    /**
+     * Даны два круга с общим центром и радиусами R1 и R2 (R1 > R2). Найти площади этих кругов S1 и S2, а также площадь S3 кольца, внешний радиус которого равен R1, а внутренний радиус равен R2:
+     *
+     * @param a
+     * @param b
+     * @return
+     */
+    public static double square_ring(double a, double b) {
+        return square(a) - square(b) > 0 ? square(a) - square(b) : square(b) - square(a);
+    }
+
+    /**
+     * Дана длина L окружности. Найти ее радиус R и площадь S круга, ог- раниченного этой окружностью,
+     * @param l
+     * @return
+     */
+    public static double radius_of_length(double l) {
+        return l / Math.PI / 2;
+    }
+
+    /**
+     * Дана длина L окружности. Найти ее радиус R и площадь S круга, ог- раниченного этой окружностью,
+     * @param l
+     * @return
+     */
+    public static double square_of_length(double l) {
+        return square(radius_of_length(l));
     }
 
 }
