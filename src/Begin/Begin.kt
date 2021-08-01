@@ -75,7 +75,7 @@ fun geometric_mean(a: Int, b: Int): Double {
  * Даны два ненулевых числа. Найти сумму, разность, произведение и частное их модулей.
  */
 fun sum(a: Double, b: Double): Double {
-    return if (a != 0.0 || b != 0.0) {
+    return if (a == 0.0 || b == 0.0) {
         0.0
     } else abs(a) + abs(b)
 };
@@ -84,7 +84,7 @@ fun sum(a: Double, b: Double): Double {
  * Даны два ненулевых числа. Найти сумму, разность, произведение и частное их модулей.
  */
 fun subtraction(a: Double, b: Double): Double {
-    return if (a != 0.0 || b != 0.0) {
+    return if (a == 0.0 || b == 0.0) {
         0.0
     } else abs(a) - abs(b)
 };
@@ -93,7 +93,7 @@ fun subtraction(a: Double, b: Double): Double {
  * Даны два ненулевых числа. Найти сумму, разность, произведение и частное их модулей.
  */
 fun multiplication(a: Double, b: Double): Double {
-    return if (a != 0.0 || b != 0.0) {
+    return if (a == 0.0 || b == 0.0) {
         0.0
     } else abs(a) * abs(b)
 };
@@ -102,7 +102,7 @@ fun multiplication(a: Double, b: Double): Double {
  * Даны два ненулевых числа. Найти сумму, разность, произведение и частное их модулей.
  */
 fun division(a: Double, b: Double): Double {
-    return if (a != 0.0 || b != 0.0) {
+    return if (a == 0.0 || b == 0.0) {
         0.0
     } else abs(a) / abs(b)
 };

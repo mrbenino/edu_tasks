@@ -109,7 +109,7 @@ public class Begin {
      * Даны два ненулевых числа. Найти сумму, разность, произведение и частное их модулей.
      */
     public static double sum(double a, double b) {
-        if(a != 0.0 ||  b != 0.0){
+        if(a == 0.0 ||  b == 0.0){
             return 0.0;
         }
 
@@ -120,7 +120,7 @@ public class Begin {
      * Даны два ненулевых числа. Найти сумму, разность, произведение и частное их модулей.
      */
     public static double subtraction(double a, double b) {
-        if(a != 0.0 ||  b != 0.0){
+        if(a == 0.0 ||  b == 0.0){
             return 0.0;
         }
 
@@ -131,7 +131,7 @@ public class Begin {
      * Даны два ненулевых числа. Найти сумму, разность, произведение и частное их модулей.
      */
     public static double multiplication(double a, double b) {
-        if(a != 0.0 ||  b != 0.0){
+        if(a == 0.0 ||  b == 0.0){
             return 0.0;
         }
 
@@ -142,7 +142,7 @@ public class Begin {
      * Даны два ненулевых числа. Найти сумму, разность, произведение и частное их модулей.
      */
     public static double division(double a, double b) {
-        if(a != 0.0 ||  b != 0.0){
+        if(a == 0.0 ||  b == 0.0){
             return 0.0;
         }
 
