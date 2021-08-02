@@ -1,15 +1,12 @@
 import begin.Begin;
 import begin.BeginKt;
+import kotlin.Pair;
 
 public class Main {
     public static void main(String[] args) {
+        begin5();
 
-        System.out.println("Обем куба: " + Begin.volume(11));
-        System.out.println("Обем куба: " + BeginKt.volume(11));
-
-        System.out.println("Площадь куба: " + Begin.square_cube(10));
-        System.out.println("Площадь куба: " + BeginKt.squareCube(10));
-
+        // TODO: move realization of each task to appropriate method
         System.out.println("Обьем прямоугольного параллелепипеда: " + Begin.volume(10, 12, 15));
         System.out.println("Обьем прямоугольного параллелепипеда: " + BeginKt.volume(10, 12, 15));
 
@@ -77,5 +74,13 @@ public class Main {
         System.out.println("Растояние между двумя точками: " + BeginKt.distanceBetween(10, 12));
     }
 
+    private static void begin5() {
+
+        Pair<Double, Double> result = BeginKt.volume(11);
+        System.out.printf("Обьем куба: %f, площадь куба: %f%n", result.getFirst(), result.getSecond());
+        //TODO: add same realization for Java variant
+        System.out.println("Обем куба: " + Begin.volume(11));
+        System.out.println("Площадь куба: " + Begin.square_cube(10));
+    }
 }
 

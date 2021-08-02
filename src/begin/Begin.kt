@@ -9,8 +9,10 @@ import kotlin.math.sqrt
  * Дана длина ребра куба a. Найти объем куба V = a3 и площадь его по-
  * верхности S = 6·a2.
  */
-fun volume(a: Double): Double {
-    return a.pow(3.0)
+fun volume(a: Double): Pair<Double, Double> {
+    val volume = a.pow(3.0)
+    val squareCube = 6 * a.pow(2)
+    return volume to squareCube
 }
 
 /**
@@ -201,6 +203,6 @@ fun lengthOfSquare(s: Double): Double {
     return diameterOfSquare(s) / PI
 }
 
-fun distanceBetween(x1: Double, x2: Double):Double {
+fun distanceBetween(x1: Double, x2: Double): Double {
     return x2 - x1
 }
