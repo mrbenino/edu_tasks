@@ -169,10 +169,34 @@ fun square_ring(a: Double, b: Double): Double {
     return if (square(a) - square(b) > 0) square(a) - square(b) else square(b) - square(a)
 }
 
+/**
+ * Дана длина L окружности. Найти ее радиус R и площадь S круга, ог- раниченного этой окружностью,
+ */
 fun radius_of_length(l: Double): Double {
     return l / PI / 2;
 }
 
+/**
+ * Дана длина L окружности. Найти ее радиус R и площадь S круга, ог- раниченного этой окружностью,
+ */
 fun square_of_length(l: Double): Double {
     return square(radius_of_length(l))
+}
+
+/**
+ * Дана площадь S круга. Найти его диаметр D и длину L окружности, ограничивающей этот круг, учитывая, что L = π·D, S = π·D2/4. В качестве значения π использовать 3.14.
+ */
+fun diameter_of_square(s: Double): Double {
+    return sqrt(s / PI / 4)
+}
+
+/**
+ * Дана площадь S круга. Найти его диаметр D и длину L окружности, ограничивающей этот круг, учитывая, что L = π·D, S = π·D2/4. В качестве значения π использовать 3.14.
+ */
+fun length_of_square(s: Double): Double {
+    return diameter_of_square(s) / PI
+}
+
+fun distance_between(x1: Double, x2: Double):Double {
+    return x2 - x1
 }

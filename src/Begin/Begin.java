@@ -247,6 +247,7 @@ public class Begin {
 
     /**
      * Дана длина L окружности. Найти ее радиус R и площадь S круга, ог- раниченного этой окружностью,
+     *
      * @param l
      * @return
      */
@@ -256,11 +257,36 @@ public class Begin {
 
     /**
      * Дана длина L окружности. Найти ее радиус R и площадь S круга, ог- раниченного этой окружностью,
+     *
      * @param l
      * @return
      */
     public static double square_of_length(double l) {
         return square(radius_of_length(l));
+    }
+
+    /**
+     * Дана площадь S круга. Найти его диаметр D и длину L окружности, ограничивающей этот круг, учитывая, что L = π·D, S = π·D2/4. В качестве значения π использовать 3.14.
+     *
+     * @param s
+     * @return
+     */
+    public static double diameter_of_square(double s) {
+        return Math.sqrt(s / 4 / Math.PI);
+    }
+
+    /**
+     * Дана площадь S круга. Найти его диаметр D и длину L окружности, ограничивающей этот круг, учитывая, что L = π·D, S = π·D2/4. В качестве значения π использовать 3.14.
+     *
+     * @param s
+     * @return
+     */
+    public static double length_of_square(double s) {
+        return diameter_of_square(s) / Math.PI;
+    }
+
+    public static double distance_between(double x1, double x2) {
+        return x2 - x1;
     }
 
 }

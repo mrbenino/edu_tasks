@@ -67,6 +67,14 @@ public class Main {
         System.out.println("Площадь из длины окружности: " + Begin.square_of_length(10));
         System.out.println("Площадь из длины окружности: " + BeginKt.square_of_length(44));
 
+        System.out.println("Диаметр окружности из площади: " + Begin.diameter_of_square(1000));
+        System.out.println("Диаметр окружности из площади: " + BeginKt.diameter_of_square(100));
+
+        System.out.println("Длина окружности из площади: " + Begin.length_of_square(1000));
+        System.out.println("Длина окружности из площади: " + BeginKt.length_of_square(100));
+
+        System.out.println("Растояние между двумя точками: " + Begin.distance_between(10, 11));
+        System.out.println("Растояние между двумя точками: " + BeginKt.distance_between(10, 12));
     }
 
 }
