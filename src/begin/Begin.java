@@ -1,4 +1,4 @@
-package Begin;
+package begin;
 
 public class Begin {
 

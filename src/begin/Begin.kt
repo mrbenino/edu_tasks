@@ -1,4 +1,4 @@
-package Begin
+package begin
 
 import kotlin.math.PI
 import kotlin.math.abs
@@ -17,7 +17,7 @@ fun volume(a: Double): Double {
  * Дана длина ребра куба a. Найти объем куба V = a3 и площадь его по-
  * верхности S = 6·a2.
  */
-fun square_cube(a: Double): Double {
+fun squareCube(a: Double): Double {
     return a * a * 6
 }
 
@@ -63,7 +63,7 @@ fun average(a: Int, b: Int): Int {
     return (a + b) / 2
 }
 
-fun geometric_mean(a: Int, b: Int): Double {
+fun geometricMean(a: Int, b: Int): Double {
     if (a < 0 || b < 0) {
         return 0.0
     }
@@ -112,7 +112,7 @@ fun division(a: Double, b: Double): Double {
  * Даны два ненулевых числа. Найти сумму, разность, произведение и
  * частное их квадратов.
  */
-fun sum_sqrt(a: Double, b: Double): Double {
+fun sumSqrt(a: Double, b: Double): Double {
     return if (a == 0.0 || b == 0.0) {
         0.0
     } else a.pow(2.0) + b.pow(2.0)
@@ -122,7 +122,7 @@ fun sum_sqrt(a: Double, b: Double): Double {
  * Даны два ненулевых числа. Найти сумму, разность, произведение и
  * частное их квадратов.
  */
-fun subtraction_sqrt(a: Double, b: Double): Double {
+fun subtractionSqrt(a: Double, b: Double): Double {
     return if (a == 0.0 || b == 0.0) {
         0.0
     } else a.pow(2.0) + b.pow(2.0)
@@ -132,7 +132,7 @@ fun subtraction_sqrt(a: Double, b: Double): Double {
  * Даны два ненулевых числа. Найти сумму, разность, произведение и
  * частное их квадратов.
  */
-fun multiplication_sqrt(a: Double, b: Double): Double {
+fun multiplicationSqrt(a: Double, b: Double): Double {
     return if (a == 0.0 || b == 0.0) {
         0.0
     } else a.pow(2.0) + b.pow(2.0)
@@ -142,7 +142,7 @@ fun multiplication_sqrt(a: Double, b: Double): Double {
  * Даны два ненулевых числа. Найти сумму, разность, произведение и
  * частное их квадратов.
  */
-fun division_sqrt(a: Double, b: Double): Double {
+fun divisionSqrt(a: Double, b: Double): Double {
     return if (a == 0.0 || b == 0.0) {
         0.0
     } else a.pow(2.0) + b.pow(2.0)
@@ -163,40 +163,44 @@ fun perimeter(a: Double, b: Double): Double {
 }
 
 /**
- * Даны два круга с общим центром и радиусами R1 и R2 (R1 > R2). Найти площади этих кругов S1 и S2, а также площадь S3 кольца, внешний радиус которого равен R1, а внутренний радиус равен R2:
+ * Даны два круга с общим центром и радиусами R1 и R2 (R1 > R2).
+ * Найти площади этих кругов S1 и S2, а также площадь S3 кольца,
+ * внешний радиус которого равен R1, а внутренний радиус равен R2:
  */
-fun square_ring(a: Double, b: Double): Double {
+fun squareRing(a: Double, b: Double): Double {
     return if (square(a) - square(b) > 0) square(a) - square(b) else square(b) - square(a)
 }
 
 /**
  * Дана длина L окружности. Найти ее радиус R и площадь S круга, ог- раниченного этой окружностью,
  */
-fun radius_of_length(l: Double): Double {
+fun radiusOfLength(l: Double): Double {
     return l / PI / 2;
 }
 
 /**
  * Дана длина L окружности. Найти ее радиус R и площадь S круга, ог- раниченного этой окружностью,
  */
-fun square_of_length(l: Double): Double {
-    return square(radius_of_length(l))
+fun squareOfLength(l: Double): Double {
+    return square(radiusOfLength(l))
 }
 
 /**
- * Дана площадь S круга. Найти его диаметр D и длину L окружности, ограничивающей этот круг, учитывая, что L = π·D, S = π·D2/4. В качестве значения π использовать 3.14.
+ * Дана площадь S круга. Найти его диаметр D и длину L окружности, ограничивающей этот круг, учитывая,
+ * что L = π·D, S = π·D2/4. В качестве значения π использовать 3.14.
  */
-fun diameter_of_square(s: Double): Double {
+fun diameterOfSquare(s: Double): Double {
     return sqrt(s / PI / 4)
 }
 
 /**
- * Дана площадь S круга. Найти его диаметр D и длину L окружности, ограничивающей этот круг, учитывая, что L = π·D, S = π·D2/4. В качестве значения π использовать 3.14.
+ * Дана площадь S круга. Найти его диаметр D и длину L окружности, ограничивающей этот круг,
+ * учитывая, что L = π·D, S = π·D2/4. В качестве значения π использовать 3.14.
  */
-fun length_of_square(s: Double): Double {
-    return diameter_of_square(s) / PI
+fun lengthOfSquare(s: Double): Double {
+    return diameterOfSquare(s) / PI
 }
 
-fun distance_between(x1: Double, x2: Double):Double {
+fun distanceBetween(x1: Double, x2: Double):Double {
     return x2 - x1
 }
