@@ -1,6 +1,13 @@
-package Begin;
+package begin;
 
-public class Begin {
+import core.Command;
+
+public class Begin implements Command {
+
+    @Override
+    public void execute() {
+
+    }
 
     /**
      * Дана длина ребра куба a. Найти объем куба V = a3 и площадь его по-
@@ -288,5 +295,4 @@ public class Begin {
     public static double distance_between(double x1, double x2) {
         return x2 - x1;
     }
-
 }
