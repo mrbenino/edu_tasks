@@ -33,7 +33,6 @@ class BeginKt : Command {
         println("Растояние между двумя точками: " + distanceBetween(10.0, 12.0))
     }
 
-
     fun begin5() {
         val (volume, squareCube) = volume(11.0)
         System.out.printf("Обьем куба: %f, площадь куба: %f%n", volume, squareCube)
