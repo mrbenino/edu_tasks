@@ -17,7 +17,7 @@ public class Begin implements Command {
         System.out.println("Разность модулей: " + Begin.subtraction(144, 674));
         System.out.println("Произведение модулей: " + Begin.multiplication(144, 674));
         System.out.println("Частное модулей: " + Begin.division(144, 674));
-        System.out.println("Сумма квадратов: " + Begin.sum_sqrt(144, 674));
+        System.out.println("Сумма квадратов: " + Begin.sumSqrt(144, 674));
         System.out.println("Разность квадратов: " + Begin.subtraction_sqrt(144, 674));
         System.out.println("Произведение квадратов: " + Begin.multiplication_sqrt(144, 674));
         System.out.println("Частное квадратов: " + Begin.division_sqrt(144, 674));
@@ -73,10 +73,6 @@ public class Begin implements Command {
      * Даны длины ребер a, b, c прямоугольного параллелепипеда. Найти его
      * объем V = a·b·c и площадь поверхности S = 2·(a·b + b·c + a·c).
      *
-     * @param a
-     * @param b
-     * @param c
-     * @return
      */
     public static int volume(int a, int b, int c) {
         return a * b * c;
@@ -85,9 +81,6 @@ public class Begin implements Command {
     /**
      * Найти длину окружности L и площадь круга S заданного радиуса R: L = 2·π·R, S = π·R2.
      * В качестве значения π использовать 3.14.
-     *
-     * @param r
-     * @return
      */
     public static double square(double r) {
         return Math.PI * Math.pow(r, 2);
@@ -96,9 +89,6 @@ public class Begin implements Command {
     /**
      * Найти длину окружности L и площадь круга S заданного радиуса R: L = 2·π·R, S = π·R2.
      * В качестве значения π использовать 3.14.
-     *
-     * @param r
-     * @return
      */
     public static double length(int r) {
         return Math.PI * 2 * r;
@@ -185,7 +175,7 @@ public class Begin implements Command {
      * @param b
      * @return
      */
-    public static double sum_sqrt(double a, double b) {
+    public static double sumSqrt(double a, double b) {
         if (a == 0.0 || b == 0.0) {
             return 0.0;
         }

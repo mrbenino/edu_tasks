@@ -1,6 +1,7 @@
 package begin
 
 import core.Command
+import core.printf
 import kotlin.math.PI
 import kotlin.math.abs
 import kotlin.math.pow
@@ -22,60 +23,59 @@ class BeginKt : Command {
         println(begin16())
     }
 
-    fun begin5() {
+    private fun begin5() {
         val (volume, squareCube) = volume(11.0)
-        System.out.printf("Обьем куба: %f, площадь куба: %f%n", volume, squareCube)
+        "Обьем куба: %f, площадь куба: %f%n".printf(volume, squareCube)
     }
 
-    fun begin7() {
+    private fun begin7() {
         val (square, length) = square(10.0)
-        System.out.printf("Длина окружности: %f,  площадь круга: %f%n", square, length)
+        "Длина окружности: %f, площадь круга: %f".printf(square, length)
     }
 
-    fun begin8() {
+    private fun begin8() {
         val average = average(10.0, 24.0)
-        System.out.printf("Cреднее арифметическое: %f %n", average)
+        "Cреднее арифметическое: %f".printf(average)
     }
 
-    fun begin9() {
+    private fun begin9() {
         val geometricMean = geometricMean(22.0, 44.0)
-        System.out.printf("Cреднее геометрическое: %f  %n", geometricMean)
+        "Cреднее геометрическое: %f".printf(geometricMean)
     }
 
-    fun begin10() {
+    private fun begin10() {
         val sum = sum(10.0, 20.0)
-        System.out.println(sum)
+        println(sum)
     }
 
-    fun begin11() {
+    private fun begin11() {
         val mySqlt = mySqlt(10.0, 20.0)
-        System.out.println(mySqlt)
+        println(mySqlt)
     }
 
-    fun begin12() {
+    private fun begin12() {
         val hypotenuse = hypotenuse(10.0, 20.0)
-        System.out.println(hypotenuse)
+        println(hypotenuse)
     }
 
-    fun begin13() {
-        System.out.println(squareRing(20.0, 10.0))
+    private fun begin13() {
+        println(squareRing(20.0, 10.0))
     }
 
-    fun begin14() {
+    private fun begin14() {
         val (radius, square) = squareOfLength(12.2)
-        System.out.printf("Радиус круга: %f площядь круга: %f%n", radius, square)
+        "Радиус круга: %f площядь круга: %f".printf(radius, square)
     }
 
-    fun begin15() {
+    private fun begin15() {
         val (diameter, length) = diameterOfSquare(10.0)
-        System.out.printf("Диаметр : %f, длина: %f%n", diameter, length)
+        "Диаметр : %f, длина: %f".printf(diameter, length)
     }
 
-    fun begin16()  {
-        val distanceBetween = distanceBetween(20.0,40.0)
-        System.out.printf("Расстояние между двумя точками: " + distanceBetween)
+    private fun begin16() {
+        val distanceBetween = abs(20.0 - 40.0)
+        println("Расстояние между двумя точками:  $distanceBetween")
     }
-
 
     /**
      * Дана длина ребра куба a. Найти объем куба V = a3 и площадь его по-
@@ -109,8 +109,7 @@ class BeginKt : Command {
      * ское, то есть квадратный корень из их произведения:
      */
     private fun geometricMean(a: Double, b: Double): Double {
-
-        if (a < 0 || b < 0) error("placeholder")
+        if (a < 0 || b < 0) error("a and b should be bigger then 0")
 
         return sqrt(a * b)
     }
@@ -148,11 +147,11 @@ class BeginKt : Command {
     }
 
     /**
-     *Даны катеты прямоугольного треугольника a и b. Найти его гипотенузу c и периметр P
+     * Даны катеты прямоугольного треугольника a и b. Найти его гипотенузу c и периметр P
      */
     private fun hypotenuse(a: Double, b: Double): Pair<Double, Double> {
-        var hypotenuse = sqrt(a.pow(2.0) + b.pow(2.0))
-        var perimeter = a + b + sqrt(a.pow(2.0) + b.pow(2.0))
+        val hypotenuse = sqrt(a.pow(2.0) + b.pow(2.0))
+        val perimeter = a + b + sqrt(a.pow(2.0) + b.pow(2.0))
         return hypotenuse to perimeter
     }
 
@@ -162,8 +161,8 @@ class BeginKt : Command {
      * внешний радиус которого равен R1, а внутренний радиус равен R2:
      */
     private fun squareRing(a: Double, b: Double): String {
-        var r1 = Math.PI * (a * a)
-        var r2 = Math.PI * (b * b)
+        val r1 = Math.PI * (a * a)
+        val r2 = Math.PI * (b * b)
         return "Площадь круга  R1:" + r1 +
                 "Площадь круга  R2:" + r2 +
                 "Площадь круга R3" + (r1 - r2)
@@ -183,10 +182,4 @@ class BeginKt : Command {
     private fun diameterOfSquare(s: Double): Pair<Double, Double> {
         return (sqrt(s / PI / 4)) to (sqrt(s / PI / 4) / PI)
     }
-
-    /**
-     * Найти расстояние между двумя точками с заданными координатами x1 и x2 на числовой оси: |x2 – x1|
-     */
-    private fun distanceBetween(x1: Double, x2: Double): Double = x2 - x1
-
 }
